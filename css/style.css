@@ -9,16 +9,9 @@ html, body {
 }
 
 .clock {
-    /* position: absolute; */
-    /* min-width: 100%;
-    min-height: 50%; */
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    /* background: rgba(66,66,66 ,0.8); */
-    /* width: 100%;
-    padding-top: 100%;
-    border-radius: 50%; */
 }
 
 .dial {
@@ -58,7 +51,6 @@ html, body {
     transform: rotate(90deg);
 }
 
-
 .hand {
     position: absolute;
     left: 50%;
@@ -81,7 +73,8 @@ html, body {
 }
 .hand.second-hand {
     background: red;
-    height: 40%;
+    height: 32%;
+    width: 0.1em;
     transform: translate(-50%, 5%) rotate(0deg);
 }
 
