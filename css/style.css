@@ -1,0 +1,238 @@
+html, body {
+    background: #212121;
+    height: 100%;
+}
+
+.wrapper {
+    padding: 0;
+    margin: 0;
+}
+
+.clock {
+    /* position: absolute; */
+    /* min-width: 100%;
+    min-height: 50%; */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background: rgba(66,66,66 ,0.8); */
+    /* width: 100%;
+    padding-top: 100%;
+    border-radius: 50%; */
+}
+
+.dial {
+    margin: 0 auto;
+    border: 0.4em solid rgba(224,224,224 ,1);
+    background: rgba(66,66,66 ,0.8);
+    box-shadow: inset 0 0 2px 2px rgba(40,40,40 ,1),
+                0 -1px 1px rgba(123, 120, 120, 0.4);
+    width: 35%;
+    padding-top: 35%;
+    border-radius: 50%;
+}
+
+.digit {
+    position: absolute;
+    width: 2px;
+    height: 4px;
+    background: rgba(224,224,224 ,1);
+}
+.digit.digit-one {
+    top: 4%;
+    left: 50%;
+}
+
+.digit.digit-two {
+    bottom: 4%;
+    left: 50%;
+}
+.digit.digit-three {
+    top: 50%;
+    left: 33.8%;
+    transform: rotate(90deg);
+}
+.digit.digit-four {
+    top: 50%;
+    right: 33.8%;
+    transform: rotate(90deg);
+}
+
+
+.hand {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    background: teal;
+    width: 0.2em;
+    height: 40%;
+    transform-origin: 50% 98%;
+    transition: transform 0.03s ease-out;
+}
+
+.hand.hour-hand {
+    height: 25%;
+    transform: translate(-50%, 5%) rotate(0deg);
+}
+.hand.minute-hand {
+    height: 40%;
+    transform: translate(-50%, 5%) rotate(0deg);
+}
+.hand.second-hand {
+    background: red;
+    height: 40%;
+    transform: translate(-50%, 5%) rotate(0deg);
+}
+
+div.circle {
+    position: absolute;
+    background: red;
+    width: 0.6em;
+    height: 0.6em;
+    top: 50%;
+    left: 49.7%;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+/* MEDIA QUERIES */
+
+/* Device = Laptops, Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .digit.digit-one {
+    top: 4%;
+    }
+    .digit.digit-two {
+        bottom: 4%;
+    }
+    .digit.digit-three {
+        left: 35%;
+    }
+    .digit.digit-four {
+        right: 35%;
+    }
+    .hand {
+        left: 50.3%;
+    }
+    div.circle {
+        width: 0.6em;
+        height: 0.6em;
+        top: 50%;
+        left: 49.8%;
+    }
+}
+  
+/* Device = Tablets, Ipads (portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .clock {
+        top: 30%;
+    }
+    .dial {
+        width: 35%;
+        padding-top: 35%;
+    }
+    .digit.digit-one {
+        top: 8%;
+    }
+    .digit.digit-two {
+        bottom: 8%;
+    }
+    .digit.digit-three {
+        left: 34.4;
+    }
+    .digit.digit-four {
+        right: 34.4%;
+    }
+    div.circle {
+        left: 49.52%;
+    }
+
+}
+
+/* Device = Tablets, Ipads (landscape) */
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+
+    .clock {
+        top: 49%;
+    }
+    .dial {
+        width: 32%;
+        padding-top: 32%;
+    }
+    .digit.digit-one {
+        top: 4%;
+    }
+    .digit.digit-two {
+        bottom: 4%;
+    }
+    .digit.digit-three {
+        left: 35%;
+    }
+    .digit.digit-four {
+        right: 35%;
+    }
+
+}
+
+/* Device = Low Resolution Tablets, Mobiles (Landscape) */ 
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .clock {
+        top: 50%;
+    }
+    .dial {
+        width: 30%;
+        padding-top: 30%;
+    }
+    .digit.digit-one {
+        top: 5%;
+    }
+
+    .digit.digit-two {
+        bottom: 5%;
+    }
+    .digit.digit-three {
+        left: 35.8%;
+    }
+    .digit.digit-four {
+        right: 35.8%;
+    }
+
+}
+
+/* Device = Most of the Smartphones Mobiles (Portrait) */
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .clock {
+        top: 40%;
+    }
+    .dial {
+        width: 50%;
+        padding-top: 50%;
+        border: 0.2em solid rgba(224,224,224 ,1);
+    }
+    .digit.digit-one {
+        top: 5.5%;
+    }
+
+    .digit.digit-two {
+        bottom: 5.5%;
+    }
+    .digit.digit-three {
+        left: 26.5%;
+    }
+    .digit.digit-four {
+        right: 26.5%;
+    }
+    .hand {
+        left: 50.3%;
+    }
+    div.circle {
+        width: 0.4em;
+        height: 0.4em;
+        left: 49.45%;
+    }
+
+}
